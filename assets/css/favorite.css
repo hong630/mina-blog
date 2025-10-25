@@ -1,0 +1,43 @@
+.content{
+    width: 80%;
+    margin: 40px auto 40px auto;
+}
+.content ul{
+    display: flex;
+    flex-direction: column;
+}
+.content ul img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.content li{
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+}
+.content li{
+    margin-top: -63px;
+}
+.content li:first-child{
+    margin-top: 0;
+}
+.content div{
+    align-self: center;
+    width: 280px;
+    padding: 20px 12px;
+    border: 1px solid #d9d9d9;
+    background: #f8f8f8;
+    /* 레이어 3개 */
+    box-shadow:
+            0 1px 0 rgba(0,0,0,0.06),
+            0 8px 16px rgba(0,0,0,0.14),
+            0 18px 36px rgba(0,0,0,0.10);
+}
+.content li:nth-child(2n){
+    justify-content: flex-start;
+
+}
+.content li:nth-child(2n-1){
+    flex-direction: row-reverse;
+}
