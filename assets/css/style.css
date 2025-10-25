@@ -115,6 +115,9 @@ body * {
     flex-direction: row;
     gap: 2px;
 }
+.header .small-box a:hover{
+    text-decoration: underline;
+}
 .header .small-box ul{
     margin: auto;
     width: 100%;
