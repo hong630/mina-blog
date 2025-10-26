@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Thinking... | 미나의 블로그</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/thingking.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="main-container">
+        <div class="content-container">
+            <div class="header">
+                <div class="small-box">
+                    <h1>mina blog</h1>
+                    <img class="header-img" src="./assets/angelegg.jpg" alt="천사의 알">
+                </div>
+                <div class="small-box">
+                    <div class="dotted-container"></div>
+                    <ul>
+                        <li>
+                            <a href="./">Main</a>
+                        </li>
+                        <li>
+                            <a href="./aboutme.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="/">Diary</a>
+                        </li>
+                        <li>
+                            <a href="./favorite.html">My favorite</a>
+                        </li>
+                        <li>
+                            <a style="font-weight: bold" href="./thinking.html">Thinking...</a>
+                        </li>
+                        <li>
+                            <a href="/">Guest book</a>
+                        </li>
+                    </ul>
+                    <div class="dotted-container"></div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="outer list">
+                    <div class="inner-container">
+                        <h2>list</h2>
+                        <ul>
+                            <li class="page_1">
+                                <a href="./thinking.html?page=1">
+                                    <span>2009/03/28</span>
+                                    <span>벽</span>
+                                </a>
+                            </li>
+                            <li class="page_2">
+                                <a href="./thinking.html?page=2">
+                                <span>2009/03/25</span>
+                                <span>미움에 대하여</span>
+                                </a>
+                            </li>
+                            <li class="page_3">
+                                <a href="./thinking.html?page=3">
+                                    <span>2009/03/14</span>
+                                    <span>이터널 선샤인을 보고</span>
+                                </a>
+                            </li>
+                            <li class="page_4">
+                                <a href="./thinking.html?page=4">
+                                    <span>2009/02/02</span>
+                                    <span>creep를 듣고</span>
+                                </a>
+                            </li>
+                            <li class="page_5">
+                                <a href="./thinking.html?page=5">
+                                    <span>2009/01/01</span>
+                                    <span>Happy together를 듣고</span>
+                                </a>
+                            </li>
+                            <li class="page_6">
+                                <a href="./thinking.html?page=6">
+                                    <span>2008/11/11</span>
+                                    <span>내가 널 사랑할 수 없는 10가지 이유</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="outer content">
+                    <div class="inner-container">
+                        <div class="text-content" id="text_content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <img class="img-dark-sad" src="./assets/dark-sad.gif" alt="my heart">
+        </div>
+    </div>
+</div>
+<canvas id="sparkles" aria-hidden="true"></canvas>
+<script src="mouse.js"></script>
+<script>
+(async () => {
+    const pageId = new URLSearchParams(location.search).get('page');
+    const targetId = pageId ? `page_${pageId}` : `page_1`;
+
+    const list = [
+        { "id": 6, "title": "내가 널 사랑할 수 없는 10가지 이유", "content": "영화를 보고 나서 한참 동안 멍했다.<br>그 중에서도 제일 싫은 건 당신이 싫지 않은 거예요.<br>그 말이 너무 솔직해서 마음이 떨렸다.<br>누군가를 미워한다는 건, 그만큼 마음이 깊었다는 뜻일지도 모른다.<br>나도 언젠가 누군가를 그렇게 미워하고,<br>그래서 더 사랑하게 되는 날이 올까.<br>그땐 나도 울면서 웃을 수 있을까.<br>" },
+        { "id": 5, "title": "Happy together를 듣고", "content": "처음 이 노래를 들었을 때,<br>가사는 단순한데 이상하게 마음이 아팠다.<br>“Imagine me and you, I do.”<br>그 문장이 오래 맴돌았다.<br>행복을 상상하는 일은 쉬운 듯 어렵다.<br>나도 누군가와 나란히 걷는 걸 상상해본다.<br>그 사람의 얼굴은 흐릿하지만,<br>웃는 소리만큼은 분명히 들리는 것 같다.<br>노래가 끝나면 다시 조용해진다.<br>그래도 괜찮다.<br>그 짧은 상상 속에서 나는 진짜 행복했으니까.<br>" },
+        { "id": 4, "title": "creep를 듣고", "content": "이 노래를 들으면 마음이 조금 무너진다.<br>누군가를 좋아하지만,<br>그 사람이 너무 멀게 느껴질 때의 기분이랑 닮았다.<br>“I’m a creep, I’m a weirdo.”<br>가사가 너무 솔직해서 아프다.<br>나도 가끔 그렇게 느낀다.<br>괜히 나만 다르게 보이고, 나만 어색한 사람처럼.<br>" },
+        { "id": 3, "title": "이터널 선샤인을 보고", "content": "영화를 보고 한동안 멍하게 있었다.<br>서로의 기억을 지우고도 다시 사랑하게 되는 사람들.<br>그게 참 이상하면서도 아름다웠다.<br>다시 싸울 걸 알면서도,<br>다시 상처받을 걸 알면서도,<br>그럼에도 사랑을 택한다는 게 용기 같았다.<br>나는 그런 사랑을 해본 적 없지만,<br>그 마음이 어떤 건지는 조금 알 것 같다.<br>좋았던 순간은 사라져도,<br>그때의 마음은 진짜였을 테니까." },
+        { "id": 2, "title": "미움에 대하여", "content": "별로 안친한 반 친구가 절박한 얼굴로 휴지를 빌려달라고했다.<br>배를 부여잡고있었으니 아마 큰 일이었을테지…<br>예상은 했지만 그 친구가 돌려준 휴지는 반토막이 나있었다.<br>미안하다는 말은 없었다. 그 친구가 미웠다.<br><br>버스에 앉아있는데 큰 가방을 매고 가던 사람이 가방으로 내 머리를 쳤다.<br>아팠고, 그 사람이 미웠다.<br>그 사람은 내 앞에 앉아있던 사람도 치고 갔다.<br>앞에 앉아있던 사람은 아무 감정 없이 ‘저기요, 제 머리 치셨어요.’ 라고만 했다.<br>큰 가방 사람은 매우 미안해하며 정중하게 사과했다.<br>그렇게하면 되는거구나. 미워하지말고 말하면 되는구나.<br><br>휴지를 반이나 쓴 친구에게도<br>있잖아, 반이나 썼네. 라고 했다면 그 친구는 사과했을까.<br>그렇다면 미워할 필요도 없었을텐데.<br>" },
+        { "id": 1,  "title": "벽", "content": "나는 가끔 나 자신이 답답하게 느껴진다. <br>하고 싶은 말이 있어도 삼키고, <br>가고 싶은 길이 있어도 겁이 난다. <br><br>『데미안』을 읽을 때, <br>“새는 알을 깨고 나온다. <br>알은 세상이다.”라는 문장을 봤다. <br>그때부터 자꾸 내 안의 벽이 생각났다. <br>그 벽은 아무도 세워준 게 아닌데, <br>내가 나를 막고 있는 것 같다. <br><br>언젠가는 그 벽을 스스로 깨고 나올 수 있을까. <br>조금 아파도, 피가 나도 괜찮으니까 <br>나는 그 알을 깨고 싶다." },
+        ]
+
+        // pageId 일치값 찾기, 없으면 맨 마지막 값 사용
+        const item = list.find(v => v.id === Number(pageId)) || list[list.length - 1];
+        const root = document.getElementById('text_content');
+
+            root.innerHTML = `
+        <article data-id="${item.id}">
+          <p>${item.title}</p>
+          <section>${item.content}</section>
+        </article>
+      `;
+
+    document.querySelectorAll('li').forEach((li)=>{
+        li.classList.contains(targetId) ? li.classList.add('active') : li.classList.remove('active');
+    })
+})();
+
+
+</script>
+</body>
+</html>
