@@ -87,3 +87,16 @@
 section{
     white-space: pre-line;
 }
+@media (max-width: 480px) {
+    .center{
+        flex-direction: column;
+        height: auto;
+    }
+    .list,
+    .content{
+        width: 100%;
+    }
+    .inner-container{
+        height: auto;
+    }
+}

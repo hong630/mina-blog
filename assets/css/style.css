@@ -384,3 +384,78 @@ body * {
     position:fixed; inset:0; pointer-events:none; z-index:9999;
 }
 @media (prefers-reduced-motion: reduce){ #sparkles{ display:none; } }
+@media (max-width: 100px) {
+    .wrap{
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .wrap{
+        width: 92vw;
+        padding-bottom: 40px;
+    }
+    .dotted-container{
+        display: none;
+    }
+    .header .small-box ul{
+        flex-wrap: wrap;
+        gap: 0 4px;
+        padding: 0 12px;
+    }
+    .header .small-box a{
+        border-left: none;
+        border-bottom: 1px solid white;
+    }
+    .header,
+    .header .small-box:last-child,
+    .left-top .small-box:first-child,
+    .right-top .small-box:first-child,
+    .left-bottom,
+    .right-top .small-box:last-child,
+    .right-top{
+        height: auto;
+    }
+    .header .small-box li:last-child a {
+        padding-right: 0;
+        border-right: unset;
+    }
+    .center{
+        flex-direction: column;
+    }
+    .left-top{
+        width: 100%;
+        flex-direction: row;
+        height: auto;
+    }
+    .center-top,
+    .right-top,
+    .left-bottom,
+    .center-bottom,
+    .right-bottom{
+        width: 100%;
+    }
+    .bottom{
+        flex-direction: column;
+    }
+    .rei-img{
+        z-index: -1;
+    }
+    .right-top .small-box:last-child ul,
+    .left-bottom ul li,
+    .right-bottom p,
+    .right-top p{
+        font-size: 14px;
+    }
+    .right-top p,
+    .center-top{
+        padding: 8px;
+    }
+    .left-bottom p{
+        font-size: 16px;
+        padding: 8px;
+    }
+    ul{
+        margin-bottom: 8px;
+    }
+
+}

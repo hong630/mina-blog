@@ -63,3 +63,21 @@ rt {
     font-size: 24px;
     opacity: 0.3;
 }
+.bottom{
+    flex-direction: column;
+}
+@media (max-width: 480px) {
+    .content{
+        width: 92%;
+    }
+    .content.top li span:first-child{
+        width: 60px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .content.bottom li span:first-child{
+        width: 104px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}

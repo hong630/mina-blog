@@ -44,3 +44,25 @@
 .mid-txt{
     font-size: 12px;
 }
+@media (max-width: 480px) {
+    .content{
+        width: 92%;
+    }
+    .content ul img {
+        width: 150px;
+        height: 150px;
+    }
+    .content li:nth-child(2n-1),
+    .content li:nth-child(2n){
+        flex-direction: column;
+    }
+    .content li:nth-child(2n) img{
+        align-self: flex-end;
+    }
+    .content li {
+        margin-top: -10px;
+    }
+    .content>p{
+        margin-bottom: 12px;
+    }
+}
