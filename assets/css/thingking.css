@@ -84,3 +84,6 @@
 .text-content p{
     margin-bottom: 20px;
 }
+section{
+    white-space: pre-line;
+}
