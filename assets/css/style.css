@@ -256,9 +256,9 @@ body * {
 }
 .img-dark-sad{
     position: absolute;
-    width: 34%;
+    width: 80px;
     height: auto;
-    top: 22%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -369,7 +369,7 @@ body * {
     width: 100%;
     height: 86px;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 .star-img{
     position: absolute;

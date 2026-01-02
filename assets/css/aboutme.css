@@ -18,8 +18,9 @@ rt {
     padding-bottom: 4px;
 }
 .content img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
+    display: block;
 }
 .content ul{
     display: flex;
