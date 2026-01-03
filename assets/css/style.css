@@ -52,11 +52,13 @@ table {
 
 /*home*/
 body{
-    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;  
+    overflow-x: clip;
     height: 100vh;
     background-color: black;
     box-sizing: border-box;
-    overflow-x: hidden;
     color: white;
     font-family: "Galmuri9", sans-serif;
     line-height: 1.4;
