@@ -56,12 +56,14 @@ body{
     min-height: 100vh;
     min-height: 100dvh;
     overflow-x: clip;
-    height: 100vh;
     background-color: black;
     box-sizing: border-box;
     color: white;
     font-family: "Galmuri9", sans-serif;
     line-height: 1.4;
+    box-sizing: border-box;
+    padding-top: 40px;
+
 }
 body * {
     box-sizing: border-box;
@@ -70,9 +72,9 @@ body * {
     width: 800px;
     height: auto;
     margin: auto;
+    padding-bottom: 40px;
 }
 .main-container{
-    margin-top: 40px;
     width: 100%;
     height: auto;
     border: 3px solid white;
