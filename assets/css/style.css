@@ -54,7 +54,7 @@ table {
 body{
     width: 100%;
     min-height: 100vh;
-    min-height: 100dvh;  
+    min-height: 100dvh;
     overflow-x: clip;
     height: 100vh;
     background-color: black;
@@ -414,7 +414,8 @@ body * {
     .right-top .small-box:first-child,
     .left-bottom,
     .right-top .small-box:last-child,
-    .right-top{
+    .right-top,
+    .center-top{
         height: auto;
     }
     .header .small-box li:last-child a {
@@ -425,9 +426,7 @@ body * {
         flex-direction: column;
     }
     .left-top{
-        width: 100%;
-        flex-direction: row;
-        height: auto;
+       display: none;
     }
     .center-top,
     .right-top,
@@ -459,5 +458,7 @@ body * {
     ul{
         margin-bottom: 8px;
     }
-
+    .left-top .small-box:first-child{
+        height: 200px;
+    }
 }
